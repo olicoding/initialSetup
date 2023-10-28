@@ -1,6 +1,6 @@
-# symfonyReact ⚛
+# Initial Setup for Full Stack projects
 
-This repository is the result of my practice in setting up new projects from scratch. It provides a straightforward yet modern initial setup for full-stack projects, utilizing the capabilities of JavaScript, React, Node.js, Firebase, PHP, Symfony, and machine learning with Tensorflow.js.
+This repository is the result of my practice in setting up new projects from scratch. It provides a straightforward and modern initial setup for full-stack projects, utilizing the capabilities of JavaScript, React, Node.js, Firebase, PHP, Symfony, and machine learning with Tensorflow.js.
 
 <div align="center">
   <img src="_frontend/src/media/home.jpg" alt="login" width="350" style="max-width: 45%">
@@ -19,7 +19,7 @@ This repository is the result of my practice in setting up new projects from scr
 - [Clone the Repository](#clone-the-repository)
 - [Set Your Environment Variables](#set-your-environment-variables)
 - [One command to set it all up](#one-command-to-set-it-all-up)
-- [Access the App](#access-the-app)
+- [Accessing the App](#accessing-the-app)
 - [Refresh the App](#refresh-the-app)
 - [That's it!](#thats-it)
 
@@ -27,8 +27,8 @@ This repository is the result of my practice in setting up new projects from scr
 
 ## Tech-stack overview
 
-- **Backend**: Symfony 6.3 and PHP 8.1
-- **Frontend**: React 18.2 and JavaScript
+- **Backend**: Symfony, Composer and Node.js
+- **Frontend**: React and JavaScript
 - **Auth**: Firebase Authentication
 - **Database**: Firebase Firestore
 - **WebML**: Tensorflow.js
@@ -45,22 +45,40 @@ Follow the steps bellow to set up and run the project on your machine.
 
 Before you begin, ensure you have the following software installed globally on your system, with the recommended minimum versions. The installation process may differ depending on your OS (macOS, Windows, or Linux):
 
-- **Node.js and npm:** Node.js 14 and npm 6 or later
+- **Node.js 14 and npm 6**
 
-  - [Node.js Download](https://nodejs.org/)
+  - [Download Node.js](https://nodejs.org/)
   - _npm is bundled with Node.js, so no separate installation is required._
 
-- **PHP:** PHP 8.1 or later
+- **Composer 2.2**
 
-  - [PHP Download](https://www.php.net/downloads)
-  - php8.1-grpc will also need to be installed on your system
+  - [Instal Composer](https://getcomposer.org/download/)
 
-- **Composer:** Composer 2.2 or later
+- **Symfony CLI 5.5**
 
-  - [Composer Installation](https://getcomposer.org/download/)
-
-- **Symfony CLI:** Symfony CLI 5.5.2 or later
   - [Symfony CLI GitHub](https://github.com/symfony/cli)
+
+- **PHP 8.1**
+
+  1. [Download PHP](https://www.php.net/downloads)
+
+  2. Enable gRPC support (Google Remote Procedure Call) by following these steps in your terminal:
+
+     - Open the PHP configuration file for PHP 8.1 using the `nano` text editor:
+
+       ```
+       sudo nano /etc/php/8.1/cli/php.ini
+       ```
+
+     - Within the configuration file, locate the section where PHP extensions are configured. This section typically contains lines starting with "extension=".
+
+     - Add the following line to enable the `grpc` extension. Make sure there's no semicolon `;` at the beginning of the line:
+
+       ```
+       extension=grpc.so
+       ```
+
+     - Save your changes in `nano`. You can typically save by pressing `Ctrl + O`, confirm the file name with `Enter`, and exit with `Ctrl + X`.
 
 <br />
 
@@ -70,13 +88,13 @@ Before you begin, ensure you have the following software installed globally on y
 
 <br />
 
-Clone the project repository to your local machine using the following command:
+Clone the project repository to your local machine using one of the following commands:
 
-via SSH key :  
-`git clone git@github.com:olicoding/symfonyReact.git`
+via SSH key:  
+`git clone git@github.com:olicoding/initialSetup.git`
 
-via HTTPS :  
-`git clone https://github.com/olicoding/symfonyReact.git`
+via HTTPS:  
+`git clone https://github.com/olicoding/initialSetup.git`
 
 <br />
 
@@ -86,25 +104,33 @@ via HTTPS :
 
 <br />
 
-You will need to create two `.env` files.
+You will need to create two `.env` files:
 
 - One for Symfony in the project's **`root` directory**
 - One for React inside the **`_frontend` directory**
 
-First, generate your own Symfony app secret by running the following command from a terminal:
+First, generate your own Symfony app secret by running the following command in the terminal:
 
-> openssl rand -hex 16
+```
+openssl rand -hex 16
+```
 
-Now, create a `.env` file in the project's **`root` directory** with the template bellow:
+If you dont have one already, create your own [Google Firebase](https://firebase.google.com/) account. It's free and straightforward, and you will need it for the credentials bellow.
+
+Now, create a `.env` file in the project's **`root` directory** with the following template:
 
 ```
 APP_ENV=dev
 APP_DEBUG=true
 APP_RUNTIME_ENV=dev
 APP_SECRET=place_your_generated_secret_here
+
+FIREBASE_API_KEY="API_KEY"
+FIREBASE_AUTH_DOMAIN="AUTH_DOMAIN"
+FIREBASE_PROJECT_ID="PROJECT_ID"
 ```
 
-Now, let's move into the **`_frontend` directory**, and create a new `.env` file there with the template bellow:
+Next, navigate to the **`_frontend` directory**, and create a new `.env` file with the following template:
 
 ```
 REACT_APP_FIREBASE_API_KEY="API_KEY"
@@ -112,7 +138,7 @@ REACT_APP_FIREBASE_AUTH_DOMAIN="AUTH_DOMAIN"
 REACT_APP_FIREBASE_PROJECT_ID="PROJECT_ID"
 ```
 
-And replace the values with the credentials from your Firebase account. If you dont have a Firebase account yet, please [create your own](https://firebase.google.com/). It's free and super simple.
+Be sure to replace the placeholder values in both files with your actual Firebase credentials and generated secret.
 
 <br />
 
@@ -122,29 +148,33 @@ And replace the values with the credentials from your Firebase account. If you d
 
 <br />
 
-From the **`root` directory**, run the following command:
+From the project's **`root` directory**, run:
 
-> npm run init
+```
+npm run init
+```
 
-( only for the first time when installing the project, it might take a few minutes... but everything is automated for your setup with this single command. )
+This single command automates your setup for the initial project installation with all dependencies, making the process convenient, even though it may take a few minutes. (Make sure you have completed the [Prerequisites](#prerequisites) before running this command)
 
 <br />
 
 ---
 
-### Access the app
+### Accessing the app
 
 <br />
 
-Open your browser and navigate to `http://localhost:3000`. The app will proxy requests to the backend automatically.
+Open your browser and navigate to `http://localhost:3000`. The app automatically proxies requests to the backend.
 
-You can also access the app via backend at `http://localhost:8000`.
+You can also access the app via the backend at `http://localhost:8000`.
 
-Profiler is also set at `http://localhost:8000/_profiler`.
+The profiler is available at `http://localhost:8000/_profiler`.
 
-Next time you want to start the project servers for development, run the following command from the **`root` directory**:
+To start the project servers for development next time, execute the following command from the **`root` directory**:
 
-> npm run dev
+```
+npm run dev
+```
 
  <br />
 
@@ -156,7 +186,9 @@ Next time you want to start the project servers for development, run the followi
 
 To synchronize/update changes between React and Symfony during development, run the following command from the **`root` directory**:
 
-> npm run refresh
+```
+npm run refresh
+```
 
 <br />
 
@@ -164,9 +196,7 @@ To synchronize/update changes between React and Symfony during development, run 
 
 ### That's it!
 
-Enjoy, have fun, and git this repo a ⭐ if you like. 😎
-
-And of course, if you create something amazing with it, I'd be thrilled to have a look!
+Enjoy, have fun, and git this repo a ⭐ if you like it. 😎
 
 ```
     ('-^-/')
@@ -180,3 +210,5 @@ And of course, if you create something amazing with it, I'd be thrilled to have 
 
  Thank you !!!
 ```
+
+And of course, if you create something cool with it, I'd be thrilled to have a look!
