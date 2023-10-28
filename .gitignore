@@ -43,3 +43,4 @@ public/react
 oli-readme.md
 .env.dev.local
 .env
+/templates

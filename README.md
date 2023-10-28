@@ -1,14 +1,14 @@
 # symfonyReact ⚛
 
-This repository provides a simple yet modern initial setup for full-stack projects, combining the power of JavaScript, React, Firebase, PHP, Symfony, and WebML.
+This repository is the result of my practice in setting up new projects from scratch. It provides a straightforward yet modern initial setup for full-stack projects, utilizing the capabilities of JavaScript, React, Node.js, Firebase, PHP, Symfony, and machine learning with Tensorflow.js.
 
 <div align="center">
-  <img src="_frontend/src/media/home.jpg" alt="login" style="max-width: 400px">
-  <img src="_frontend/src/media/protected-route.jpg" alt="logout" style="max-width: 400px">
+  <img src="_frontend/src/media/home.jpg" alt="login" width="350" style="max-width: 45%">
+  <img src="_frontend/src/media/protected-route.jpg" alt="logout" width="350" style="max-width: 45%">
 </div>
 
 <div align="center">
-  <img src="_frontend/src/media/symfony-profiler.png" alt="profiler" style="max-width: 400px">
+  <img src="_frontend/src/media/symfony-profiler.png" alt="profiler" width="400" style="max-width: 80%">
 </div>
 
 ## Table of Contents
