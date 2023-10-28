@@ -28,7 +28,7 @@ This repository is the result of my practice in setting up new projects from scr
 ## Tech-stack overview
 
 - **Backend**: Symfony, Composer and Node.js
-- **Frontend**: React and JavaScript
+- **Frontend**: React, JavaScript and Sass
 - **Auth**: Firebase Authentication
 - **Database**: Firebase Firestore
 - **WebML**: Tensorflow.js
@@ -60,25 +60,25 @@ Before you begin, ensure you have the following software installed globally on y
 
 - **PHP 8.1**
 
-  1. [Download PHP](https://www.php.net/downloads)
+  - [Download PHP](https://www.php.net/downloads)
 
-  2. Enable gRPC support (Google Remote Procedure Call) by following these steps in your terminal:
+  - Enable gRPC support (Google Remote Procedure Call) by following these steps in your terminal:
 
-     - Open the PHP configuration file for PHP 8.1 using the `nano` text editor:
+    - Open the PHP configuration file for PHP 8.1 using the `nano` text editor:
 
-       ```
-       sudo nano /etc/php/8.1/cli/php.ini
-       ```
+      ```
+      sudo nano /etc/php/8.1/cli/php.ini
+      ```
 
-     - Within the configuration file, locate the section where PHP extensions are configured. This section typically contains lines starting with "extension=".
+    - Within the configuration file, locate the section where PHP extensions are configured. This section typically contains lines starting with "extension=".
 
-     - Add the following line to enable the `grpc` extension. Make sure there's no semicolon `;` at the beginning of the line:
+    - Add the following line to enable the `grpc` extension. Make sure there's no semicolon `;` at the beginning of the line:
 
-       ```
-       extension=grpc.so
-       ```
+      ```
+      extension=grpc.so
+      ```
 
-     - Save your changes in `nano`. You can typically save by pressing `Ctrl + O`, confirm the file name with `Enter`, and exit with `Ctrl + X`.
+    - Save your changes in `nano`. You can typically save by pressing `Ctrl + O`, confirm the file name with `Enter`, and exit with `Ctrl + X`.
 
 <br />
 
