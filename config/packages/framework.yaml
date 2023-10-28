@@ -1,0 +1,18 @@
+framework:
+  secret: "%env(APP_SECRET)%"
+  http_method_override: true
+  handle_all_throwables: true
+  profiler: { collect: true }
+  php_errors:
+    log: true
+# csrf_protection:
+#     enabled: true
+# session:
+#   handler_id: session.handler.native_file
+#   save_path: "%kernel.project_dir%/var/sessions/%kernel.environment%"
+#   cookie_secure: auto
+#   cookie_samesite: lax
+
+#esi: true
+#fragments: true
+

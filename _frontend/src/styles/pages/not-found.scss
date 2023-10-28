@@ -1,0 +1,41 @@
+/* ========= */
+/* ERROR 404 */
+/* ========= */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--light-grey);
+  font-family: Arial, sans-serif;
+}
+
+.not-found__title {
+  font-size: 4rem;
+  margin: 0;
+  color: #006699;
+}
+
+.not-found__text {
+  font-size: 1.4rem;
+  margin: 0.2em 0;
+  text-align: center;
+  color: #333;
+}
+
+.not-found__button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 3rem;
+  background-color: var(--blue);
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-top: 1.5em;
+  transition: background-color 0.3s var(--easing);
+}
+
+.not-found__button:hover {
+  background-color: var(--dark-grey);
+}

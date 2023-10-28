@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "init": "npm i && composer install ; cd _frontend && npm i && npm run refresh ; cd .. && cd _webml && npm i ; cd .. && npm run dev",
+    "dev": "concurrently \"symfony server:start --no-tls\" \"cd _frontend && npm start\"",
+    "refresh": "cd _frontend && npm run refresh"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

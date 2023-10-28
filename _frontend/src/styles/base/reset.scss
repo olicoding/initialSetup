@@ -1,0 +1,155 @@
+/* Reset Styles */
+/*----------------------------------------*/
+
+img {
+  border: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5em 0;
+}
+
+/* Improve horizontal rule styling */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+code,
+kbd,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+/* Avoid affecting line height with sub and sup elements */
+sub,
+sup {
+  font-size: 0.75rem;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Improve form element styling */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove inner border and padding on buttons */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+fieldset {
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+}
+
+legend {
+  color: #333;
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-results-button,
+[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none;
+}
+
+/*----------------------------------------*/

@@ -1,0 +1,5 @@
+kreait_firebase:
+  projects:
+    symfony-eshop:
+      credentials: "%kernel.project_dir%/config/firebase/firebaseAccKey.json"
+      # database_uri: "https://symfony-eshop.firebaseio.com"

@@ -1,0 +1,7 @@
+framework:
+  secret: "%env(APP_SECRET)%"
+  http_method_override: true
+  handle_all_throwables: true
+  profiler: { collect: true }
+  php_errors:
+    log: true

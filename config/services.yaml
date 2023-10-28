@@ -1,0 +1,15 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\:
+    resource: "../src/"
+    exclude:
+      - "../src/{DependencyInjection,Entity,Kernel.php}"
+
+  App\Controller\AuthController:
+    autowire: true
+    tags: ["controller.service_arguments"]
